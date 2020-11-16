@@ -8,7 +8,7 @@
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_TuuUFSfzEeugduPViouxjA" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_TuuUFifzEeugduPViouxjA" name="" content="" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:Task" xmi:id="_TuuUFyfzEeugduPViouxjA" name="Step1" incoming="_TuuUKCfzEeugduPViouxjA" overrideActorsOfTheLane="false">
+        <elements xmi:type="process:Task" xmi:id="_TuuUFyfzEeugduPViouxjA" name="Step1" outgoing="_c0QVMCfzEeugduPViouxjA" incoming="_TuuUKCfzEeugduPViouxjA" overrideActorsOfTheLane="false">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_TuuUGCfzEeugduPViouxjA" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_TuuUGSfzEeugduPViouxjA" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_TuuUGifzEeugduPViouxjA" name="" content="" returnTypeFixed="true"/>
@@ -23,6 +23,11 @@
           <contract xmi:type="process:Contract" xmi:id="_TuuUIifzEeugduPViouxjA"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_TuuUIyfzEeugduPViouxjA" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
+        <elements xmi:type="process:EndTerminatedEvent" xmi:id="_cz7lECfzEeugduPViouxjA" name="End1" incoming="_c0QVMCfzEeugduPViouxjA">
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_cz8MISfzEeugduPViouxjA" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_cz8MICfzEeugduPViouxjA" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_cz8zMCfzEeugduPViouxjA" name="" content="" returnTypeFixed="true"/>
+        </elements>
       </elements>
       <formMapping xmi:type="process:FormMapping" xmi:id="_TuuUJCfzEeugduPViouxjA">
         <targetForm xmi:type="expression:Expression" xmi:id="_TuuUJSfzEeugduPViouxjA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
@@ -33,6 +38,10 @@
       <connections xmi:type="process:SequenceFlow" xmi:id="_TuuUKCfzEeugduPViouxjA" target="_TuuUFyfzEeugduPViouxjA" source="_TuuUEyfzEeugduPViouxjA">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_TuuUKSfzEeugduPViouxjA"/>
         <condition xmi:type="expression:Expression" xmi:id="_TuuUKifzEeugduPViouxjA" name="" type="TYPE_CONDITION" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_c0QVMCfzEeugduPViouxjA" target="_cz7lECfzEeugduPViouxjA" source="_TuuUFyfzEeugduPViouxjA">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_c0QVMSfzEeugduPViouxjA"/>
+        <condition xmi:type="expression:Expression" xmi:id="_c0QVMifzEeugduPViouxjA" name="" type="TYPE_CONDITION" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
       <actors xmi:type="process:Actor" xmi:id="_TuuUKyfzEeugduPViouxjA" documentation="This is an example of actor that is mapped to any ACME users" name="Employee actor" initiator="true"/>
       <contract xmi:type="process:Contract" xmi:id="_TuuULCfzEeugduPViouxjA"/>
@@ -84,6 +93,12 @@
               </children>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TuuUUifzEeugduPViouxjA" x="60" y="68"/>
             </children>
+            <children xmi:type="notation:Shape" xmi:id="_c0CSwCfzEeugduPViouxjA" type="3062" element="_cz7lECfzEeugduPViouxjA" fontName=".AppleSystemUIFont">
+              <children xmi:type="notation:DecorationNode" xmi:id="_c0C50CfzEeugduPViouxjA" type="5090">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_c0C50SfzEeugduPViouxjA" y="5"/>
+              </children>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_c0CSwSfzEeugduPViouxjA" x="368" y="66"/>
+            </children>
           </children>
           <styles xmi:type="notation:DescriptionStyle" xmi:id="_TuuUUyfzEeugduPViouxjA"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_TuuUVCfzEeugduPViouxjA" fontName=".AppleSystemUIFont"/>
@@ -105,6 +120,13 @@
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_TuuUYSfzEeugduPViouxjA" fontName=".AppleSystemUIFont"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_TuuUYifzEeugduPViouxjA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_c0Q8QCfzEeugduPViouxjA" type="4001" element="_c0QVMCfzEeugduPViouxjA" source="_TuuUTCfzEeugduPViouxjA" target="_c0CSwCfzEeugduPViouxjA" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_c0RjUCfzEeugduPViouxjA" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_c0RjUSfzEeugduPViouxjA" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_c0Q8QSfzEeugduPViouxjA" fontName=".AppleSystemUIFont"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_c0Q8QifzEeugduPViouxjA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
     </edges>
   </notation:Diagram>
 </xmi:XMI>
